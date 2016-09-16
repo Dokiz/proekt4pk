@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Test</title>
+  <script src="main.js">
+  </script>  
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+  body { background: url(img/1.jpg); }
+</style>
+
+   </head>
+   
+<body>
+    <div class="top-block"> 
+   <div class="knopka-block">
+        <p><center><a href="index.html">ВХОД</a></center></p>
+   </div>
+   <div class="knopka2-block">
+     <p><center><a href="index3.html">РЕГИСТРАЦИЯ</a></center></p>
+   </div>
+   </div>
+   <div class="left-block">  
+   
+   </div>
+   <div class="right-block"> </div>
+   <div class="bottom-block"> </div>
+   <div class="center-block"> 
+   <div><center>
+   <? if (!isset($_REQUEST['GO']))
+{?>
+    <form action="<?=$_SERVER['SCRIPT_NAME']?>">
+        <p>Логин</p><input type="text" name = "LOGIN" size="15" value=""/><br>
+        <p>Пароль</p><input type="password" name = "PASS" size="15" value=""/><br>
+        <br>
+           <!--<input type="submit" name="GO" value="Войти">-->
+	<button><a href="ponel.html">войти</a></button>
+    </form>
+<?}
+   else {
+        if ($_REQUEST['LOGIN']=="root"&&$_REQUEST['PASS'] == "111")
+        {
+            echo "Succes for user $_REQUEST[LOGIN]";
+        }
+        else
+        {
+            echo "Acces denied";
+        }
+      }
+    ?>
+	</center></div>
+	</div>
+   
+   
+</body>
+  </html>
